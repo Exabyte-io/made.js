@@ -176,12 +176,14 @@ export declare function MaterialMixin<T extends MaterialBaseEntityConstructor = 
         getBasisConsistencyChecks(): ConsistencyCheck[];
         consistencyChecks: object[];
         addConsistencyChecks(array: object[]): void;
+        _schema: import("@exabyte-io/code.js/dist/entity/in_memory").SimpleSchema | null;
         prop: (<T_1 = null>(name: string, defaultValue?: T_1 | undefined) => T_1) & (<T_2 = null>(name: string, defaultValue?: T_2 | undefined) => T_2) & (<T_3 = null>(name: string, defaultValue?: T_3 | undefined) => T_3) & (<T_4 = null>(name: string, defaultValue?: T_4 | undefined) => T_4) & (<T_5 = null>(name: string, defaultValue?: T_5 | undefined) => T_5);
         setProp: ((name: string, value: unknown) => void) & ((name: string, value: unknown) => void) & ((name: string, value: unknown) => void) & ((name: string, value: unknown) => void) & ((name: string, value: unknown) => void);
         unsetProp: ((name: string) => void) & ((name: string) => void) & ((name: string) => void) & ((name: string) => void) & ((name: string) => void);
         toJSONSafe: ((exclude?: string[] | undefined) => AnyObject) & ((exclude?: string[] | undefined) => AnyObject) & ((exclude?: string[] | undefined) => AnyObject) & ((exclude?: string[] | undefined) => AnyObject) & ((exclude?: string[] | undefined) => AnyObject);
         toJSONQuick: ((exclude?: string[] | undefined) => AnyObject) & ((exclude?: string[] | undefined) => AnyObject) & ((exclude?: string[] | undefined) => AnyObject) & ((exclude?: string[] | undefined) => AnyObject) & ((exclude?: string[] | undefined) => AnyObject);
         clone: ((extraContext?: object | undefined) => any) & ((extraContext?: object | undefined) => any) & ((extraContext?: object | undefined) => any) & ((extraContext?: object | undefined) => any) & ((extraContext?: object | undefined) => any);
+        schema: import("@exabyte-io/code.js/dist/entity/in_memory").SimpleSchema | null;
         validate: (() => void) & (() => void) & (() => void) & (() => void) & (() => void);
         clean: ((config: AnyObject) => AnyObject) & ((config: AnyObject) => AnyObject) & ((config: AnyObject) => AnyObject) & ((config: AnyObject) => AnyObject) & ((config: AnyObject) => AnyObject);
         isValid: (() => boolean) & (() => boolean) & (() => boolean) & (() => boolean) & (() => boolean);
@@ -190,7 +192,7 @@ export declare function MaterialMixin<T extends MaterialBaseEntityConstructor = 
         getClsName: (() => string) & (() => string) & (() => string) & (() => string) & (() => string);
         readonly slug: string;
         readonly isSystemEntity: boolean;
-        getAsEntityReference: ((byIdOnly?: boolean | undefined) => import("@mat3ra/esse/lib/js/types").EntityReferenceSchema) & ((byIdOnly?: boolean | undefined) => import("@mat3ra/esse/lib/js/types").EntityReferenceSchema) & ((byIdOnly?: boolean | undefined) => import("@mat3ra/esse/lib/js/types").EntityReferenceSchema) & ((byIdOnly?: boolean | undefined) => import("@mat3ra/esse/lib/js/types").EntityReferenceSchema) & ((byIdOnly?: boolean | undefined) => import("@mat3ra/esse/lib/js/types").EntityReferenceSchema);
+        getAsEntityReference: ((byIdOnly?: boolean | undefined) => import("@exabyte-io/code.js/src/types").EntityReferenceSchema) & ((byIdOnly?: boolean | undefined) => import("@exabyte-io/code.js/src/types").EntityReferenceSchema) & ((byIdOnly?: boolean | undefined) => import("@exabyte-io/code.js/src/types").EntityReferenceSchema) & ((byIdOnly?: boolean | undefined) => import("@exabyte-io/code.js/src/types").EntityReferenceSchema) & ((byIdOnly?: boolean | undefined) => import("@exabyte-io/code.js/dist/types").EntityReferenceSchema);
         getEntityByName: ((entities: import("@exabyte-io/code.js/dist/entity").InMemoryEntity[], entity: string, name: string) => import("@exabyte-io/code.js/dist/entity").InMemoryEntity) & ((entities: import("@exabyte-io/code.js/dist/entity").InMemoryEntity[], entity: string, name: string) => import("@exabyte-io/code.js/dist/entity").InMemoryEntity) & ((entities: import("@exabyte-io/code.js/dist/entity").InMemoryEntity[], entity: string, name: string) => import("@exabyte-io/code.js/dist/entity").InMemoryEntity) & ((entities: import("@exabyte-io/code.js/dist/entity").InMemoryEntity[], entity: string, name: string) => import("@exabyte-io/code.js/dist/entity").InMemoryEntity) & ((entities: import("@exabyte-io/code.js/dist/entity").InMemoryEntity[], entity: string, name: string) => import("@exabyte-io/code.js/dist/entity").InMemoryEntity);
         metadata: object;
         updateMetadata(object: object): void;
@@ -364,12 +366,14 @@ export declare const Material: {
         getBasisConsistencyChecks(): ConsistencyCheck[];
         consistencyChecks: object[];
         addConsistencyChecks(array: object[]): void;
+        _schema: import("@exabyte-io/code.js/dist/entity/in_memory").SimpleSchema | null;
         prop: (<T = null>(name: string, defaultValue?: T | undefined) => T) & (<T_1 = null>(name: string, defaultValue?: T_1 | undefined) => T_1) & (<T_2 = null>(name: string, defaultValue?: T_2 | undefined) => T_2) & (<T_3 = null>(name: string, defaultValue?: T_3 | undefined) => T_3) & (<T_4 = null>(name: string, defaultValue?: T_4 | undefined) => T_4);
         setProp: ((name: string, value: unknown) => void) & ((name: string, value: unknown) => void) & ((name: string, value: unknown) => void) & ((name: string, value: unknown) => void) & ((name: string, value: unknown) => void);
         unsetProp: ((name: string) => void) & ((name: string) => void) & ((name: string) => void) & ((name: string) => void) & ((name: string) => void);
         toJSONSafe: ((exclude?: string[] | undefined) => AnyObject) & ((exclude?: string[] | undefined) => AnyObject) & ((exclude?: string[] | undefined) => AnyObject) & ((exclude?: string[] | undefined) => AnyObject) & ((exclude?: string[] | undefined) => AnyObject);
         toJSONQuick: ((exclude?: string[] | undefined) => AnyObject) & ((exclude?: string[] | undefined) => AnyObject) & ((exclude?: string[] | undefined) => AnyObject) & ((exclude?: string[] | undefined) => AnyObject) & ((exclude?: string[] | undefined) => AnyObject);
         clone: ((extraContext?: object | undefined) => any) & ((extraContext?: object | undefined) => any) & ((extraContext?: object | undefined) => any) & ((extraContext?: object | undefined) => any) & ((extraContext?: object | undefined) => any);
+        schema: import("@exabyte-io/code.js/dist/entity/in_memory").SimpleSchema | null;
         validate: (() => void) & (() => void) & (() => void) & (() => void) & (() => void);
         clean: ((config: AnyObject) => AnyObject) & ((config: AnyObject) => AnyObject) & ((config: AnyObject) => AnyObject) & ((config: AnyObject) => AnyObject) & ((config: AnyObject) => AnyObject);
         isValid: (() => boolean) & (() => boolean) & (() => boolean) & (() => boolean) & (() => boolean);
@@ -378,7 +382,7 @@ export declare const Material: {
         getClsName: (() => string) & (() => string) & (() => string) & (() => string) & (() => string);
         readonly slug: string;
         readonly isSystemEntity: boolean;
-        getAsEntityReference: ((byIdOnly?: boolean | undefined) => import("@mat3ra/esse/lib/js/types").EntityReferenceSchema) & ((byIdOnly?: boolean | undefined) => import("@mat3ra/esse/lib/js/types").EntityReferenceSchema) & ((byIdOnly?: boolean | undefined) => import("@mat3ra/esse/lib/js/types").EntityReferenceSchema) & ((byIdOnly?: boolean | undefined) => import("@mat3ra/esse/lib/js/types").EntityReferenceSchema) & ((byIdOnly?: boolean | undefined) => import("@mat3ra/esse/lib/js/types").EntityReferenceSchema);
+        getAsEntityReference: ((byIdOnly?: boolean | undefined) => import("@exabyte-io/code.js/src/types").EntityReferenceSchema) & ((byIdOnly?: boolean | undefined) => import("@exabyte-io/code.js/src/types").EntityReferenceSchema) & ((byIdOnly?: boolean | undefined) => import("@exabyte-io/code.js/src/types").EntityReferenceSchema) & ((byIdOnly?: boolean | undefined) => import("@exabyte-io/code.js/src/types").EntityReferenceSchema) & ((byIdOnly?: boolean | undefined) => import("@exabyte-io/code.js/dist/types").EntityReferenceSchema);
         getEntityByName: ((entities: import("@exabyte-io/code.js/dist/entity").InMemoryEntity[], entity: string, name: string) => import("@exabyte-io/code.js/dist/entity").InMemoryEntity) & ((entities: import("@exabyte-io/code.js/dist/entity").InMemoryEntity[], entity: string, name: string) => import("@exabyte-io/code.js/dist/entity").InMemoryEntity) & ((entities: import("@exabyte-io/code.js/dist/entity").InMemoryEntity[], entity: string, name: string) => import("@exabyte-io/code.js/dist/entity").InMemoryEntity) & ((entities: import("@exabyte-io/code.js/dist/entity").InMemoryEntity[], entity: string, name: string) => import("@exabyte-io/code.js/dist/entity").InMemoryEntity) & ((entities: import("@exabyte-io/code.js/dist/entity").InMemoryEntity[], entity: string, name: string) => import("@exabyte-io/code.js/dist/entity").InMemoryEntity);
         metadata: object;
         updateMetadata(object: object): void;
@@ -417,6 +421,7 @@ export declare const Material: {
     consistencyChecks: object[];
     addConsistencyChecks(array: object[]): void;
     _json: AnyObject;
+    _schema: import("@exabyte-io/code.js/dist/entity/in_memory").SimpleSchema | null;
     prop<T = null>(name: string, defaultValue?: T | undefined): T;
     setProp(name: string, value: unknown): void;
     unsetProp(name: string): void;
@@ -424,6 +429,7 @@ export declare const Material: {
     toJSONSafe(exclude?: string[] | undefined): AnyObject;
     toJSONQuick(exclude?: string[] | undefined): AnyObject;
     clone(extraContext?: object | undefined): any;
+    schema: import("@exabyte-io/code.js/dist/entity/in_memory").SimpleSchema | null;
     validate(): void;
     clean(config: AnyObject): AnyObject;
     isValid(): boolean;
@@ -432,12 +438,13 @@ export declare const Material: {
     getClsName(): string;
     readonly slug: string;
     readonly isSystemEntity: boolean;
-    getAsEntityReference(byIdOnly?: boolean | undefined): import("@mat3ra/esse/lib/js/types").EntityReferenceSchema;
+    getAsEntityReference(byIdOnly?: boolean | undefined): import("@exabyte-io/code.js/src/types").EntityReferenceSchema;
     getEntityByName(entities: import("@exabyte-io/code.js/dist/entity").InMemoryEntity[], entity: string, name: string): import("@exabyte-io/code.js/dist/entity").InMemoryEntity;
 }) & (new (...args: any[]) => {
     metadata: object;
     updateMetadata(object: object): void;
     _json: AnyObject;
+    _schema: import("@exabyte-io/code.js/dist/entity/in_memory").SimpleSchema | null;
     prop<T_1 = null>(name: string, defaultValue?: T_1 | undefined): T_1;
     setProp(name: string, value: unknown): void;
     unsetProp(name: string): void;
@@ -445,6 +452,7 @@ export declare const Material: {
     toJSONSafe(exclude?: string[] | undefined): AnyObject;
     toJSONQuick(exclude?: string[] | undefined): AnyObject;
     clone(extraContext?: object | undefined): any;
+    schema: import("@exabyte-io/code.js/dist/entity/in_memory").SimpleSchema | null;
     validate(): void;
     clean(config: AnyObject): AnyObject;
     isValid(): boolean;
@@ -453,12 +461,13 @@ export declare const Material: {
     getClsName(): string;
     readonly slug: string;
     readonly isSystemEntity: boolean;
-    getAsEntityReference(byIdOnly?: boolean | undefined): import("@mat3ra/esse/lib/js/types").EntityReferenceSchema;
+    getAsEntityReference(byIdOnly?: boolean | undefined): import("@exabyte-io/code.js/src/types").EntityReferenceSchema;
     getEntityByName(entities: import("@exabyte-io/code.js/dist/entity").InMemoryEntity[], entity: string, name: string): import("@exabyte-io/code.js/dist/entity").InMemoryEntity;
 }) & (new (...args: any[]) => {
     name: string;
     setName(name: string): void;
     _json: AnyObject;
+    _schema: import("@exabyte-io/code.js/dist/entity/in_memory").SimpleSchema | null;
     prop<T_2 = null>(name: string, defaultValue?: T_2 | undefined): T_2;
     setProp(name: string, value: unknown): void;
     unsetProp(name: string): void;
@@ -466,23 +475,22 @@ export declare const Material: {
     toJSONSafe(exclude?: string[] | undefined): AnyObject;
     toJSONQuick(exclude?: string[] | undefined): AnyObject;
     clone(extraContext?: object | undefined): any;
+    schema: import("@exabyte-io/code.js/dist/entity/in_memory").SimpleSchema | null;
     validate(): void;
     clean(config: AnyObject): AnyObject;
     isValid(): boolean;
     id: string;
     readonly cls: string;
     getClsName(): string;
-    readonly slug: string; /**
-     * @summary a series of checks for the material and returns an array of results in ConsistencyChecks format.
-     * @returns Array of checks results
-     */
+    readonly slug: string;
     readonly isSystemEntity: boolean;
-    getAsEntityReference(byIdOnly?: boolean | undefined): import("@mat3ra/esse/lib/js/types").EntityReferenceSchema;
+    getAsEntityReference(byIdOnly?: boolean | undefined): import("@exabyte-io/code.js/src/types").EntityReferenceSchema;
     getEntityByName(entities: import("@exabyte-io/code.js/dist/entity").InMemoryEntity[], entity: string, name: string): import("@exabyte-io/code.js/dist/entity").InMemoryEntity;
 }) & {
     new (...args: any[]): {
         readonly isDefault: boolean;
         _json: AnyObject;
+        _schema: import("@exabyte-io/code.js/dist/entity/in_memory").SimpleSchema | null;
         prop<T_3 = null>(name: string, defaultValue?: T_3 | undefined): T_3;
         setProp(name: string, value: unknown): void;
         unsetProp(name: string): void;
@@ -490,6 +498,7 @@ export declare const Material: {
         toJSONSafe(exclude?: string[] | undefined): AnyObject;
         toJSONQuick(exclude?: string[] | undefined): AnyObject;
         clone(extraContext?: object | undefined): any;
+        schema: import("@exabyte-io/code.js/dist/entity/in_memory").SimpleSchema | null;
         validate(): void;
         clean(config: AnyObject): AnyObject;
         isValid(): boolean;
@@ -498,7 +507,7 @@ export declare const Material: {
         getClsName(): string;
         readonly slug: string;
         readonly isSystemEntity: boolean;
-        getAsEntityReference(byIdOnly?: boolean | undefined): import("@mat3ra/esse/lib/js/types").EntityReferenceSchema;
+        getAsEntityReference(byIdOnly?: boolean | undefined): import("@exabyte-io/code.js/src/types").EntityReferenceSchema;
         getEntityByName(entities: import("@exabyte-io/code.js/dist/entity").InMemoryEntity[], entity: string, name: string): import("@exabyte-io/code.js/dist/entity").InMemoryEntity;
     };
     readonly defaultConfig: object | null;
