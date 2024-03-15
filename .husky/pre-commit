@@ -3,4 +3,4 @@
 
 npx lint-staged
 npm run transpile
-git add lib
+#git add lib

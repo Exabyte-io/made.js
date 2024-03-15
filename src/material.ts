@@ -15,6 +15,7 @@ import {
     PRIMITIVE_TO_CONVENTIONAL_CELL_LATTICE_TYPES,
     PRIMITIVE_TO_CONVENTIONAL_CELL_MULTIPLIERS,
 } from "./cell/conventional_cell";
+import { Statistics as CodeMirrorSelection } from "./codemirrorApi";
 import { ATOMIC_COORD_UNITS, units } from "./constants";
 import { Constraint } from "./constraints/constraints";
 import { Lattice } from "./lattice/lattice";
@@ -173,6 +174,14 @@ export function MaterialMixin<
             }
             this.setProp("basis", basis);
             this.updateFormula();
+        }
+
+        /**
+         * @param selection from @codemirror text editor
+         */
+        setSelection(selection: CodeMirrorSelection) {
+            const basis = parsers.xyz.selectionToBasis(this.basis, selection);
+            this.setProp("basis", basis);
         }
 
         setBasisConstraints(constraints: Constraint[]) {

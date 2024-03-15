@@ -10,6 +10,7 @@
     "outDir": "./lib",
     "noEmitOnError": false,
     "isolatedModules": true,
+    "resolveJsonModule": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,

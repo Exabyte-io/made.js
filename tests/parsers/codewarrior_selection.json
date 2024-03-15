@@ -1,0 +1,79 @@
+{
+    "about": "selection from pyridine.xyz, selected 1st coordinate (x) on all 5 carbon atoms",
+    "line": {
+        "from": 219,
+        "to": 273,
+        "number": 5,
+        "text": "C       -0.180226841     -0.781300882      0.986935030"
+    },
+    "lineCount": 12,
+    "lineBreak": "\n",
+    "length": 604,
+    "readOnly": false,
+    "tabSize": 4,
+    "selection": {
+        "ranges": [
+            {
+                "from": 8,
+                "to": 20,
+                "flags": 1073741775
+            },
+            {
+                "from": 63,
+                "to": 75,
+                "flags": 1073741775
+            },
+            {
+                "from": 118,
+                "to": 130,
+                "flags": 1073741775
+            },
+            {
+                "from": 227,
+                "to": 239,
+                "flags": 1073741775
+            },
+            {
+                "from": 282,
+                "to": 294,
+                "flags": 1073741775
+            }
+        ],
+        "mainIndex": 3
+    },
+    "selectionAsSingle": {
+        "from": 227,
+        "to": 239,
+        "flags": 1073741775
+    },
+    "ranges": [
+        {
+            "from": 8,
+            "to": 20,
+            "flags": 1073741775
+        },
+        {
+            "from": 63,
+            "to": 75,
+            "flags": 1073741775
+        },
+        {
+            "from": 118,
+            "to": 130,
+            "flags": 1073741775
+        },
+        {
+            "from": 227,
+            "to": 239,
+            "flags": 1073741775
+        },
+        {
+            "from": 282,
+            "to": 294,
+            "flags": 1073741775
+        }
+    ],
+    "selectionCode": "-0.180226841",
+    "selections": ["-0.180226841", "-0.180226841", "-0.180226841", "-0.180226841", "-0.180226841"],
+    "selectedText": true
+}
