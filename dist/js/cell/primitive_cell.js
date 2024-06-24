@@ -119,7 +119,14 @@ const PRIMITIVE_CELLS = {
         (x) => math_1.default.unit(x, "degree").to("rad").value);
         const [cosAlpha, cosBeta, cosGamma] = [alpha, beta, gamma].map((x) => math_1.default.cos(x));
         const [sinAlpha, sinBeta] = [alpha, beta].map((x) => math_1.default.sin(x));
-        const gammaStar = math_1.default.acos((cosAlpha * cosBeta - cosGamma) / (sinAlpha * sinBeta));
+        let acosArg = (cosAlpha * cosBeta - cosGamma) / (sinAlpha * sinBeta);
+        if (acosArg < -1) {
+            acosArg = -1;
+        }
+        else if (acosArg > 1) {
+            acosArg = 1;
+        }
+        const gammaStar = math_1.default.acos(acosArg);
         const cosGammaStar = math_1.default.cos(gammaStar);
         const sinGammaStar = math_1.default.sin(gammaStar);
         return [
