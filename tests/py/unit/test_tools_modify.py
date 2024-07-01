@@ -7,6 +7,7 @@ from mat3ra.made.tools.modify import (
     filter_by_layers,
     filter_by_rectangle_projection,
     filter_by_sphere,
+    filter_by_triangle_projection,
 )
 from mat3ra.utils import assertion as assertion_utils
 
@@ -126,3 +127,12 @@ def test_filter_by_rectangle_projection():
     # Default will contain all the atoms
     section = filter_by_rectangle_projection(material)
     assertion_utils.assert_deep_almost_equal(material.basis.to_json(), section.basis.to_json())
+
+
+def test_filter_by_triangle_projection():
+    # Small prism in the middle of the cell containing the central atom will be removed -- the same as with sphere
+    material = Material(SI_CONVENTIONAL_CELL)
+    section = filter_by_triangle_projection(material, [0.4, 0.4], [0.4, 0.5], [0.5, 0.5])
+    cavity = filter_by_triangle_projection(material, [0.4, 0.4], [0.4, 0.5], [0.5, 0.5], invert_selection=True)
+    assertion_utils.assert_deep_almost_equal(expected_basis_sphere_cluster, section.basis.to_json())
+    assertion_utils.assert_deep_almost_equal(expected_basis_sphere_cavity, cavity.basis.to_json())
